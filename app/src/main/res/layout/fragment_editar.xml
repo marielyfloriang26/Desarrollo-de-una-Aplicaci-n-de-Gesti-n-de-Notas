@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- LISTA -->
+    <LinearLayout
+        android:id="@+id/panelLista"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Selecciona una nota para editarla"
+            android:textStyle="italic" />
+
+        <ListView
+            android:id="@+id/listaEditar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="#DDDDDD"
+            android:dividerHeight="1dp" />
+    </LinearLayout>
+
+    <!-- FORMULARIO -->
+    <ScrollView
+        android:id="@+id/panelForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/edtEditTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Título"
+                android:inputType="textCapSentences"
+                android:maxLines="1" />
+
+            <EditText
+                android:id="@+id/edtEditDescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Descripción"
+                android:inputType="textMultiLine|textCapSentences"
+                android:minLines="4"
+                android:gravity="top" />
+
+            <ImageView
+                android:id="@+id/imgEditar"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="12dp"
+                android:background="#E0E0E0"
+                android:scaleType="centerCrop"
+                android:src="@android:drawable/ic_menu_gallery" />
+
+            <Button
+                android:id="@+id/btnCambiarImagen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Cambiar imagen" />
+
+            <Button
+                android:id="@+id/btnActualizar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Actualizar nota" />
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Eliminar nota"
+                android:backgroundTint="#D32F2F" />
+
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cancelar" />
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>
